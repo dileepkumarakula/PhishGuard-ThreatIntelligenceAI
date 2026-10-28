@@ -1,0 +1,476 @@
+{
+  "training_findings": {
+    "source_rows": 235795,
+    "source_columns": 56,
+    "source_column_dtypes": {
+      "FILENAME": "str",
+      "URL": "str",
+      "URLLength": "int64",
+      "Domain": "str",
+      "DomainLength": "int64",
+      "IsDomainIP": "int64",
+      "TLD": "str",
+      "URLSimilarityIndex": "float64",
+      "CharContinuationRate": "float64",
+      "TLDLegitimateProb": "float64",
+      "URLCharProb": "float64",
+      "TLDLength": "int64",
+      "NoOfSubDomain": "int64",
+      "HasObfuscation": "int64",
+      "NoOfObfuscatedChar": "int64",
+      "ObfuscationRatio": "float64",
+      "NoOfLettersInURL": "int64",
+      "LetterRatioInURL": "float64",
+      "NoOfDegitsInURL": "int64",
+      "DegitRatioInURL": "float64",
+      "NoOfEqualsInURL": "int64",
+      "NoOfQMarkInURL": "int64",
+      "NoOfAmpersandInURL": "int64",
+      "NoOfOtherSpecialCharsInURL": "int64",
+      "SpacialCharRatioInURL": "float64",
+      "IsHTTPS": "int64",
+      "LineOfCode": "int64",
+      "LargestLineLength": "int64",
+      "HasTitle": "int64",
+      "Title": "str",
+      "DomainTitleMatchScore": "float64",
+      "URLTitleMatchScore": "float64",
+      "HasFavicon": "int64",
+      "Robots": "int64",
+      "IsResponsive": "int64",
+      "NoOfURLRedirect": "int64",
+      "NoOfSelfRedirect": "int64",
+      "HasDescription": "int64",
+      "NoOfPopup": "int64",
+      "NoOfiFrame": "int64",
+      "HasExternalFormSubmit": "int64",
+      "HasSocialNet": "int64",
+      "HasSubmitButton": "int64",
+      "HasHiddenFields": "int64",
+      "HasPasswordField": "int64",
+      "Bank": "int64",
+      "Pay": "int64",
+      "Crypto": "int64",
+      "HasCopyrightInfo": "int64",
+      "NoOfImage": "int64",
+      "NoOfCSS": "int64",
+      "NoOfJS": "int64",
+      "NoOfSelfRef": "int64",
+      "NoOfEmptyRef": "int64",
+      "NoOfExternalRef": "int64",
+      "label": "int64"
+    },
+    "source_missing_values_by_column": {
+      "FILENAME": 0,
+      "URL": 0,
+      "URLLength": 0,
+      "Domain": 0,
+      "DomainLength": 0,
+      "IsDomainIP": 0,
+      "TLD": 0,
+      "URLSimilarityIndex": 0,
+      "CharContinuationRate": 0,
+      "TLDLegitimateProb": 0,
+      "URLCharProb": 0,
+      "TLDLength": 0,
+      "NoOfSubDomain": 0,
+      "HasObfuscation": 0,
+      "NoOfObfuscatedChar": 0,
+      "ObfuscationRatio": 0,
+      "NoOfLettersInURL": 0,
+      "LetterRatioInURL": 0,
+      "NoOfDegitsInURL": 0,
+      "DegitRatioInURL": 0,
+      "NoOfEqualsInURL": 0,
+      "NoOfQMarkInURL": 0,
+      "NoOfAmpersandInURL": 0,
+      "NoOfOtherSpecialCharsInURL": 0,
+      "SpacialCharRatioInURL": 0,
+      "IsHTTPS": 0,
+      "LineOfCode": 0,
+      "LargestLineLength": 0,
+      "HasTitle": 0,
+      "Title": 0,
+      "DomainTitleMatchScore": 0,
+      "URLTitleMatchScore": 0,
+      "HasFavicon": 0,
+      "Robots": 0,
+      "IsResponsive": 0,
+      "NoOfURLRedirect": 0,
+      "NoOfSelfRedirect": 0,
+      "HasDescription": 0,
+      "NoOfPopup": 0,
+      "NoOfiFrame": 0,
+      "HasExternalFormSubmit": 0,
+      "HasSocialNet": 0,
+      "HasSubmitButton": 0,
+      "HasHiddenFields": 0,
+      "HasPasswordField": 0,
+      "Bank": 0,
+      "Pay": 0,
+      "Crypto": 0,
+      "HasCopyrightInfo": 0,
+      "NoOfImage": 0,
+      "NoOfCSS": 0,
+      "NoOfJS": 0,
+      "NoOfSelfRef": 0,
+      "NoOfEmptyRef": 0,
+      "NoOfExternalRef": 0,
+      "label": 0
+    },
+    "source_exact_duplicate_rows": 0,
+    "source_duplicate_raw_urls": 425,
+    "source_unique_raw_urls": 235370,
+    "source_raw_url_label_conflicts": 0,
+    "source_unique_raw_domains": 220077,
+    "canonical_unique_urls_used": 234862,
+    "rows_rejected_or_collapsed": 933,
+    "rejected_reasons": {
+      "unsafe_or_invalid": 34,
+      "canonical_label_conflicts": 1
+    },
+    "rows_by_label_used": {
+      "Phishing": 100013,
+      "Legitimate": 134849
+    },
+    "registrable_domain_groups_used": 175487,
+    "mixed_label_registrable_domain_groups_source": {
+      "group_count": 120,
+      "row_count": 1374
+    },
+    "filename_numeric_label_correlation_diagnostic_only": -0.6036039056361181,
+    "https_fraction_by_label": {
+      "Phishing": 0.48523691920050394,
+      "Legitimate": 1.0
+    },
+    "url_similarity_index_mean_by_label_diagnostic_only": {
+      "Phishing": 49.61697250897354,
+      "Legitimate": 100.0
+    },
+    "tld_legitimate_probability_mean_by_label_diagnostic_only": {
+      "Phishing": 0.23209908954282032,
+      "Legitimate": 0.2816254304464219
+    },
+    "excluded_source_columns": [
+      "FILENAME",
+      "all 54 precomputed features including target-associated URLSimilarityIndex and reputation/character probabilities"
+    ]
+  },
+  "evaluation_protocol": "5-fold StratifiedGroupKFold; group is PSL registrable domain; every row receives one out-of-fold score; random split is diagnostic only",
+  "metrics_grouped_by_registrable_domain": {
+    "folds": [
+      {
+        "fold": 1,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 2,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 3,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 4,
+        "train_rows": 187891,
+        "test_rows": 46971,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 5,
+        "train_rows": 187890,
+        "test_rows": 46972,
+        "registrable_domain_overlap": 0
+      }
+    ],
+    "accuracy": 0.9704890531461028,
+    "precision": 0.9747481184037463,
+    "recall": 0.9658402742151007,
+    "f1": 0.969561114562919,
+    "roc_auc_legitimate_positive": 0.9955638297110587,
+    "confusion_matrix_labels_0_phishing_1_legitimate": [
+      [
+        93462,
+        6551
+      ],
+      [
+        380,
+        134469
+      ]
+    ],
+    "per_class": {
+      "Phishing": {
+        "precision": 0.9959506404381834,
+        "recall": 0.934498515193025,
+        "f1": 0.9642464728792138,
+        "support": 100013
+      },
+      "Legitimate": {
+        "precision": 0.9535455963693094,
+        "recall": 0.9971820332371764,
+        "f1": 0.9748757562466243,
+        "support": 134849
+      }
+    }
+  },
+  "same_split_model_comparison": {
+    "protocol": "Baseline and candidate XGBClassifier pipelines use the exact same 5 StratifiedGroupKFold splits, grouped by registrable domain.",
+    "baseline_current_url_xgboost": {
+      "model_config": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.06,
+        "min_child_weight": 3,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "reg_lambda": 3.0,
+        "random_state": 42
+      },
+      "metrics": {
+        "folds": [
+          {
+            "fold": 1,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 2,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 3,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 4,
+            "train_rows": 187891,
+            "test_rows": 46971,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 5,
+            "train_rows": 187890,
+            "test_rows": 46972,
+            "registrable_domain_overlap": 0
+          }
+        ],
+        "accuracy": 0.9704890531461028,
+        "precision": 0.9747481184037463,
+        "recall": 0.9658402742151007,
+        "f1": 0.969561114562919,
+        "roc_auc_legitimate_positive": 0.9955638297110587,
+        "confusion_matrix_labels_0_phishing_1_legitimate": [
+          [
+            93462,
+            6551
+          ],
+          [
+            380,
+            134469
+          ]
+        ],
+        "per_class": {
+          "Phishing": {
+            "precision": 0.9959506404381834,
+            "recall": 0.934498515193025,
+            "f1": 0.9642464728792138,
+            "support": 100013
+          },
+          "Legitimate": {
+            "precision": 0.9535455963693094,
+            "recall": 0.9971820332371764,
+            "f1": 0.9748757562466243,
+            "support": 134849
+          }
+        }
+      }
+    },
+    "candidate_url_xgboost": {
+      "model_config": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 5.0,
+        "random_state": 42
+      },
+      "metrics": {
+        "folds": [
+          {
+            "fold": 1,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 2,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 3,
+            "train_rows": 187889,
+            "test_rows": 46973,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 4,
+            "train_rows": 187891,
+            "test_rows": 46971,
+            "registrable_domain_overlap": 0
+          },
+          {
+            "fold": 5,
+            "train_rows": 187890,
+            "test_rows": 46972,
+            "registrable_domain_overlap": 0
+          }
+        ],
+        "accuracy": 0.9680748694978327,
+        "precision": 0.9728822841479927,
+        "recall": 0.9629720637410952,
+        "f1": 0.9670394944009078,
+        "roc_auc_legitimate_positive": 0.9948612720064891,
+        "confusion_matrix_labels_0_phishing_1_legitimate": [
+          [
+            92869,
+            7144
+          ],
+          [
+            354,
+            134495
+          ]
+        ],
+        "per_class": {
+          "Phishing": {
+            "precision": 0.9962026538515173,
+            "recall": 0.928569285992821,
+            "f1": 0.9611977064315138,
+            "support": 100013
+          },
+          "Legitimate": {
+            "precision": 0.949561914444468,
+            "recall": 0.9973748414893696,
+            "f1": 0.9728812823703018,
+            "support": 134849
+          }
+        }
+      }
+    },
+    "selected_model": "baseline_current_url_xgboost",
+    "selection_rule": "Higher macro-F1, then ROC-AUC for ties; the baseline is retained on a tie."
+  },
+  "random_stratified_split_diagnostic_only": {
+    "metrics": {
+      "accuracy": 0.9904200285270262,
+      "precision": 0.9911990254863189,
+      "recall": 0.989255343622817,
+      "f1": 0.9901855172709824,
+      "roc_auc_legitimate_positive": 0.9975214730026314,
+      "confusion_matrix_labels_0_phishing_1_legitimate": [
+        [
+          19631,
+          372
+        ],
+        [
+          78,
+          26892
+        ]
+      ],
+      "per_class": {
+        "Phishing": {
+          "precision": 0.9960424171698209,
+          "recall": 0.9814027895815628,
+          "f1": 0.9886684125705076,
+          "support": 20003
+        },
+        "Legitimate": {
+          "precision": 0.9863556338028169,
+          "recall": 0.9971078976640712,
+          "f1": 0.991702621971457,
+          "support": 26970
+        }
+      }
+    },
+    "registrable_domain_overlap_count": 2786
+  },
+  "grouped_ablation_without_https_feature": {
+    "folds": [
+      {
+        "fold": 1,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 2,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 3,
+        "train_rows": 187889,
+        "test_rows": 46973,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 4,
+        "train_rows": 187891,
+        "test_rows": 46971,
+        "registrable_domain_overlap": 0
+      },
+      {
+        "fold": 5,
+        "train_rows": 187890,
+        "test_rows": 46972,
+        "registrable_domain_overlap": 0
+      }
+    ],
+    "accuracy": 0.8929158399400499,
+    "precision": 0.9124340151548748,
+    "recall": 0.8770869793675111,
+    "f1": 0.8865538188111234,
+    "roc_auc_legitimate_positive": 0.9770341142349951,
+    "confusion_matrix_labels_0_phishing_1_legitimate": [
+      [
+        77047,
+        22966
+      ],
+      [
+        2184,
+        132665
+      ]
+    ],
+    "per_class": {
+      "Phishing": {
+        "precision": 0.972435031742626,
+        "recall": 0.7703698519192504,
+        "f1": 0.8596884693490437,
+        "support": 100013
+      },
+      "Legitimate": {
+        "precision": 0.8524329985671235,
+        "recall": 0.9838041068157717,
+        "f1": 0.913419168273203,
+        "support": 134849
+      }
+    }
+  },
+  "warning": "Dataset-only evaluation is not evidence of real-world effectiveness. The source has HTTPS for every legitimate row but only about half of phishing rows, and filename numbering is strongly label-associated; filenames were excluded. Validate on independent contemporary data before deployment claims."
+}
